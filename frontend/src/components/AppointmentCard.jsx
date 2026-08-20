@@ -18,14 +18,16 @@ const AppointmentCard = ({ patientName, doctorName, date, timeSlot, status }) =>
     }
   };
 
+  const statusClass = status?.toLowerCase() || 'pending';
+
   return (
-    <div className={`appointment-card card-status-${status?.toLowerCase() || 'pending'}`}>
+    <div className={`appointment-card ${statusClass}`}>
       <div className="appointment-card-header">
         <div className="patient-info">
           <h3>{patientName || 'Unknown Patient'}</h3>
           <p className="doctor-name">Doctor: {doctorName || 'Assigned Doctor'}</p>
         </div>
-        <span className={getStatusClass(status)}>
+        <span className={`status-badge ${statusClass}`}>
           {status || 'pending'}
         </span>
       </div>
