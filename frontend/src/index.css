@@ -1,0 +1,283 @@
+/* Simple Minimalist Light Theme CSS for College Practical Exam */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.5;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar Navigation */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dee2e6;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #495057;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #0d6efd;
+  background-color: #e9ecef;
+}
+
+/* Main Container Layout */
+.main-content {
+  flex: 1;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.page-header {
+  margin-bottom: 20px;
+  text-align: left;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 10px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* Responsive Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Appointment Card Component (Task 1) */
+.appointment-card {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appointment-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.patient-info h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #212529;
+}
+
+.doctor-name {
+  color: #495057;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.details-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: #495057;
+  background-color: #f8f9fa;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+}
+
+/* Simple Status Tags (Task 1 Requirement) */
+.status-badge {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.status-confirmed {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #664d03;
+  border: 1px solid #ffecb5;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+/* Doctor Card Component */
+.doctor-card {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.avail-badge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.avail-online {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.avail-offline {
+  background-color: #e2e3e5;
+  color: #41464b;
+}
+
+/* Booking Form Styling (Task 2) */
+.form-container {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #212529;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #ffffff;
+  color: #212529;
+  font-size: 14px;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: #0d6efd;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #0d6efd;
+  background-color: #0d6efd;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Live Preview Card (Task 2 Requirement) */
+.live-preview {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e7f1ff;
+  border: 1px solid #b6d4fe;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #084298;
+}
+
+.live-preview-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Loading & Error Indicators (Task 4) */
+.loading-box, .error-box {
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+}
+
+.error-box {
+  border-color: #f5c2c7;
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 16px;
+  color: #6c757d;
+  font-size: 12px;
+  border-top: 1px solid #dee2e6;
+  background-color: #ffffff;
+}
