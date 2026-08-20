@@ -47,8 +47,8 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <div className="page-header">
-        <h1 className="page-title">Hospital Appointment Dashboard</h1>
-        <p className="page-subtitle">MedCare Hospital System — Patient appointments overview</p>
+        <h1 className="page-title dashboard-title">Hospital Appointment Dashboard</h1>
+        <p className="page-subtitle dashboard-subtitle">MedCare Hospital System — Patient appointments overview</p>
       </div>
 
       <div style={{ marginBottom: '20px' }}>
